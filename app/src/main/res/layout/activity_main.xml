@@ -203,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/oquvchilar"
+                    android:text="@string/o_quvchilar"
                     android:textColor="@color/colorAccent"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -281,6 +281,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/textNews"
                     tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="@string/dummytext"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/textNews" />
 
                 <TextView
                     android:layout_width="match_parent"
