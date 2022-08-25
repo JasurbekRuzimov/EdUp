@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menuHome"
+    android:icon="@drawable/ic_home"
+    android:title="@string/bosh_sahifa"
+    tools:ignore="MenuTitle" />
+
+    <item
+    android:id="@+id/menuLike"
+    android:icon="@drawable/ic_favorite"
+    android:title="@string/sevimli_darslar"
+    tools:ignore="MenuTitle" />
+
+    <item
+    android:id="@+id/menuSettings"
+    android:icon="@drawable/ic_settings"
+    android:title="@string/sozlamalar"
+    tools:ignore="MenuTitle" />
+
+    <item
+    android:id="@+id/menuAccount"
+    android:icon="@drawable/ic_account"
+    android:title="@string/akkaunt"
+    tools:ignore="MenuTitle" />
+</menu>

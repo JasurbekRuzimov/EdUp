@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSplashBackground"
+    tools:context=".SplashScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie1"
+        android:layout_width="208dp"
+        android:layout_height="144dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="592dp"
+        android:backgroundTintMode="src_over"
+        android:elevation="5dp"
+        android:foregroundGravity="center_vertical"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/student_transparent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie2"
+        android:layout_width="wrap_content"
+        android:layout_height="286dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="345dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="160dp"
+        android:backgroundTintMode="src_over"
+        android:elevation="5dp"
+        android:foregroundGravity="center_vertical"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/student" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie3"
+        android:layout_width="362dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="688dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTintMode="src_over"
+        android:elevation="5dp"
+        android:foregroundGravity="center_vertical"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/welcome" />
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable-v24/news_background.xml" value="0.1665" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable-v24/white_rectangle_background.xml" value="0.1665" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable/header_background.xml" value="0.12" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable/ic_account.xml" value="0.1665" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable/ic_favorite_border.xml" value="0.124" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable/ic_menu.xml" value="0.1665" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/drawable/search_icon_background.xml" value="0.1665" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/ruzim/AndroidStudioProjects/MyEduApp/app/src/main/res/menu/navigation_menu.xml" value="0.11891891891891893" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

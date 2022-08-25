@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyEduApp</string>
+    <string name="hello">Hello</string>
+    <string name="john">John</string>
+    <string name="John">John</string>
+    <string name="maktab">Maktab</string>
+    <string name="Dasturchi">Dasturchi</string>
+    <string name="dasturlash">Dasturlash</string>
+    <string name="search">Search</string>
+    <string name="o_quvchilar">O\'quvchilar</string>
+    <string name="yangiliklar">Yangiliklar</string>
+    <string name="dummytext">Lorem impsum is simply dummy text of the printing and typessetting industry</string>
+    <string name="Alaykum">Alaykum</string>
+    <string name="Assalomu">Assalomu</string>
+    <string name="home">Home</string>
+    <string name="sozlamalar">Sozlamalar</string>
+    <string name="sevimli_darslar">Sevimli darslar</string>
+    <string name="bosh_sahifa">Bosh sahifa</string>
+    <string name="akkaunt">Akkaunt</string>
+    <string name="oquvchilar">oquvchilar</string>
+    <string name="Oquvchilar">O\'quvchilar</string>
+    <string name="xush_kelibsiz">Xush kelibsiz</string>
+</resources>
