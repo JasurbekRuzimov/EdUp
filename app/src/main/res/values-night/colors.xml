@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="purple_200">#FFBB86FC</color>
     <color name="background">#252C4B</color>
     <color name="card_background">#27325F</color>
     <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_700" tools:ignore="MissingDefaultResource">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#2BCC6F</color>
     <color name="colorPrimaryDark">#2BCC6F</color>
-    <color name="colorAccent">#333333</color>
+    <color name="colorAccent">#0B0A0A</color>
     <color name="colorPrimaryLight">#E9F8F1</color>
     <color name="colorBackground">#EBEBEB</color>
     <color name="colorTrendingStart">#00B09B</color>
