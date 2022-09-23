@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menuprofile"
+        android:icon="@drawable/profile"
+        android:title="Profil"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        android:title="Sozlamalar"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menusupport"
+        android:icon="@drawable/support1"
+        android:title="Qo'llab quvvatlash"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menunotification"
+        android:icon="@drawable/notification"
+        android:title="Bildirishnoma"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menuInbox"
+        android:icon="@drawable/inbox"
+        android:title="Pochta qutisi"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/menuAbout"
+        android:icon="@drawable/about_us"
+        android:title="Biz haqimizda !"
+        tools:ignore="HardcodedText" />
+</menu>
