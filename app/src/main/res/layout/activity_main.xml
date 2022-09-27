@@ -1,364 +1,463 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#77D8E4"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawerLayout"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/colorPrimary"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-45dp"
-        tools:layout_editor_absoluteY="2dp">
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navBarMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            tools:ignore="MissingConstraints" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navBarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:headerLayout="@layout/round_image_navigationview"
+        app:menu="@menu/navigation_drawer"
+        tools:ignore="MissingConstraints" />
 
-        <ImageView
-            android:id="@+id/navbaricon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="330dp"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_menu"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:tint="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="UseAppTint" />
-
-
-                <ImageView
-                    android:id="@+id/edUpIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="299dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="9dp"
-                    android:src="@drawable/logo_1"
-                    app:layout_constraintStart_toEndOf="@id/navbaricon"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/hello1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="100dp"
-                    android:layout_marginStart="250dp"
-                    android:text="@string/edup"
-                    android:textColor="@color/colorYellow"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/navbaricon"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/navbaricon"
-                    app:layout_constraintVertical_bias="0.777"
-                    tools:ignore="UseAppTint" />
-
-    </androidx.drawerlayout.widget.DrawerLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/header_background"
-        android:padding="10dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorDivider">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/white_rectangle_background"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/navbaricon"
-            tools:ignore="NotSibling">
-
-
-            <EditText
-                android:id="@+id/searchId"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:hint="@string/search"
-                android:imeOptions="actionSearch"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:textColor="@color/colorAccent"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/search_icon_background"
-                android:contentDescription="@string/app_name"
-                android:padding="6dp"
-                android:src="@drawable/ic_search"
-                android:tint="@color/colorPrimary"
-                tools:ignore="UseAppTint" />
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:overScrollMode="never"
-        android:scrollbars="none"
-       app:layout_constraintBottom_toTopOf="@id/vievDivider"
-        app:layout_constraintTop_toBottomOf="@id/layoutHeader">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutHeader"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="@id/navigationView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
 
-            <LinearLayout
-                android:id="@+id/layoutDevv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/white_rectangle_background"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp"
-                app:layout_constraintDimensionRatio="H,1:1"
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/edUpIcon"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/logo_1"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/layoutGoal"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/dasturchi_uchun" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/dasturlash"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layoutGoal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/white_rectangle_background"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintEnd_toStartOf="@id/layoutDevv"
+                app:layout_constraintHorizontal_bias="0.027"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:riv_oval="true"
+                tools:ignore="ContentDescription,MissingConstraints" />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/maktab" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/maktab"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layoutPupil"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/hello1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/white_rectangle_background"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintEnd_toStartOf="@id/layoutDevv"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutGoal">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/oquvchi_uchun" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/o_quvchilar"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layoutHome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/white_rectangle_background"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp"
-                app:layout_constraintDimensionRatio="H,1:1"
+                android:layout_marginTop="30dp"
+                android:text="@string/edup"
+                android:textColor="@color/colorYellow"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/navbaricon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/layoutGoal"
-                app:layout_constraintTop_toBottomOf="@id/layoutDevv">
+                app:layout_constraintHorizontal_bias="0.196"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.791"
+                tools:ignore="NotSibling,UseAppTint" />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
-                    android:padding="8dp"
-                    android:src="@drawable/uy_uchun" />
+            <ImageView
+                android:id="@+id/navbaricon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_menu"
+                android:tint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,UseAppTint" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Mening uyim"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/news_background"
-                android:padding="35dp"
-                app:layout_constraintEnd_toEndOf="@id/layoutHome"
-                app:layout_constraintStart_toStartOf="@id/layoutPupil"
-                app:layout_constraintTop_toBottomOf="@id/layoutPupil">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_rectangle_background"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/navbaricon"
+                tools:layout_editor_absoluteX="25dp">
 
-                <TextView
-                    android:id="@+id/textNews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/white_rectangle_background"
-                    android:paddingStart="8dp"
-                    android:paddingTop="2dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="2dp"
-                    android:text="@string/yangiliklar"
+
+                <EditText
+                    android:id="@+id/searchId"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/search_icon_background"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_favorite_border"
-                    android:tint="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@id/textNews"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/textNews"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/colorPrimary"
                     tools:ignore="UseAppTint" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:ellipsize="end"
-                    android:maxLines="3"
-                    android:text="@string/dummytext"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/textNews" />
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/vievDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutDevv"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:ellipsize="end"
-                    android:maxLines="3"
-                    android:text="@string/dummytext"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/textNews" />
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutGoal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/dasturchi_uchun" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/dasturlash"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGoal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toStartOf="@id/layoutDevv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/maktab" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/maktab"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutPupil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toStartOf="@id/layoutDevv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutGoal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/oquvchi_uchun" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/o_quvchilar"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layoutGoal"
+                    app:layout_constraintTop_toBottomOf="@id/layoutDevv"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/app_name"
+                        android:padding="8dp"
+                        android:src="@drawable/uy_uchun" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Mening uyim"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:padding="35dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/layoutHome"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/layoutPupil"
+                    app:layout_constraintTop_toBottomOf="@id/layoutPupil"
+                    app:layout_constraintVertical_bias="0.132">
+
+                    <TextView
+                        android:id="@+id/textNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/header_background"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/yangiliklar"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_like"
+                        android:tint="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@id/textNews"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/textNews"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/dummytext"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/textNews"
+                        tools:layout_editor_absoluteX="35dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/dummytext"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textNews" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/white_rectangle_background"
+                    android:padding="35dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline"
+                    app:layout_constraintEnd_toEndOf="@id/layoutHome"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@id/layoutPupil"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="NotSibling">
+
+                    <TextView
+                        android:id="@+id/textNews1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/header_background"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/yangiliklar"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_like"
+                        android:tint="@color/red"
+                        app:layout_constraintBottom_toBottomOf="@id/textNews1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/textNews1"
+                        tools:ignore="UseAppTint" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/dummytext"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/textNews1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="@string/dummytext"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/textNews1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_end="60dp" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/white_rectangle_background"
+            android:backgroundTint="@color/colorBottomBar"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:itemIconSize="32dp"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimary"
+            app:labelVisibilityMode="selected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/navigation_menu" />
 
-    </ScrollView>
+        <View
+            android:id="@+id/vievDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBottomBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/navigationView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/navigationView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorBottomBar"
-        app:itemIconSize="32dp"
-        app:itemIconTint="@color/colorPrimary"
-        app:labelVisibilityMode="selected"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        android:textAlignment="center"
-        app:itemTextColor="@color/colorPrimary"/>
-<View
-    android:id="@+id/vievDivider"
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="@color/colorBottomBar"
-    app:layout_constraintBottom_toBottomOf="@id/navigationView"
-    />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -4,8 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#77D8E4"
+    android:background="@color/colorDivider"
     tools:context=".MyHome_Activity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/backHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="364dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/navbaricon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/navbaricon"
+            android:layout_width="70dp"
+            android:layout_height="33dp"
+            android:contentDescription="@string/app_name"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.411"
+            tools:ignore="MissingConstraints,UseAppTint" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:layout_width="237dp"

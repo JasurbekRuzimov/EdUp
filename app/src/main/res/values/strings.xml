@@ -21,4 +21,14 @@
     <string name="Oquvchilar">O\'quvchilar</string>
     <string name="xush_kelibsiz">Xush kelibsiz</string>
     <string name="edup">EdUp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="maktab_uchun">Maktab uchun</string>
+    <string name="o_quvchilar_uchun">O\'quvchilar uchun</string>
+    <string name="uy_uchun">Uy uchun</string>
+    <string name="dasturchi_uchun">Dasturchi uchun</string>
+    <string name="profil_uchun">Profil uchun</string>
+    <string name="parametrlar_uchun">Parametrlar uchun</string>
+    <string name="sevimli_darslar_uchun">Sevimli darslar uchun</string>
+    <string name="jasurbek_ruzimov">Jasurbek Ruzimov</string>
 </resources>
