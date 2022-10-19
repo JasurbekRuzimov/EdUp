@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/menuprofile"
+        android:id="@+id/menuProfile"
         android:icon="@drawable/profile"
         android:title="Profil"
         tools:ignore="HardcodedText" />
@@ -14,13 +14,13 @@
         tools:ignore="HardcodedText" />
 
     <item
-        android:id="@+id/menusupport"
+        android:id="@+id/menuSupport"
         android:icon="@drawable/support1"
         android:title="Qo'llab quvvatlash"
         tools:ignore="HardcodedText" />
 
     <item
-        android:id="@+id/menunotification"
+        android:id="@+id/menuNotification"
         android:icon="@drawable/notification"
         android:title="Bildirishnoma"
         tools:ignore="HardcodedText" />

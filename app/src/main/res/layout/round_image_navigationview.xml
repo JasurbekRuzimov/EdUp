@@ -5,16 +5,21 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="20dp">
-<com.makeramen.roundedimageview.RoundedImageView
-    android:id="@+id/roundImageNavigationView"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
-    android:scaleType="centerCrop"
-    android:src="@drawable/profile_photo"
-    tools:ignore="MissingConstraints"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:riv_oval="true"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundImageNavigationView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/viewSupporter"
@@ -27,16 +32,18 @@
         />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="31dp"
         android:text="@string/jasurbek_ruzimov"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/viewSupporter"
         app:layout_constraintStart_toEndOf="@+id/roundImageNavigationView"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
